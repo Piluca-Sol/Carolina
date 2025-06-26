@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Perfil - Guía Gamer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-nav-container">
+      <img src="logo.png" alt="Guía Gamer Logo" class="logo">
+      <h1>Mi Perfil</h1>
+    </div>
+  
+    <div class="nav-user-container">
+      <nav>
+        <ul>
+          <li><a href="Index.html" class="activo">Inicio</a></li>
+          <li><a href="guias.html">Guías</a></li>
+          <li><a href="directos.html">Directos</a></li>
+          <li><a href="registro.html">Registro</a></li>
+        </ul>
+      </nav>
+      <a href="perfil.html" class="user-icon" title="Mi Perfil">
+        <img src="user-icon.svg" alt="Usuario" />
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Nombre de usuario: <span id="username">Usuario123</span></h2>
+    </section>
+
+    <section>
+      <h3>Guías leídas</h3>
+      <ul id="guias-leidas">
+        <li>Guía de Zelda</li>
+        <li>Guía de Mario Kart</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Directos vistos</h3>
+      <ul id="directos-vistos">
+        <li>Directo de Fortnite</li>
+        <li>Directo de Among Us</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Cambiar contraseña</h3>
+      <form id="cambiar-pass-form">
+        <label for="old-pass">Contraseña actual:</label><br />
+        <input type="password" id="old-pass" name="old-pass" required /><br /><br />
+
+        <label for="new-pass">Nueva contraseña:</label><br />
+        <input type="password" id="new-pass" name="new-pass" required /><br /><br />
+
+        <label for="confirm-pass">Confirmar nueva contraseña:</label><br />
+        <input type="password" id="confirm-pass" name="confirm-pass" required /><br /><br />
+
+        <button type="submit">Cambiar contraseña</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById('cambiar-pass-form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const oldPass = form['old-pass'].value;
+      const newPass = form['new-pass'].value;
+      const confirmPass = form['confirm-pass'].value;
+
+      if (newPass !== confirmPass) {
+        alert('La nueva contraseña no coincide.');
+        return;
+      }
+      // Aquí puedes agregar lógica para validar y guardar la contraseña
+      alert('Contraseña cambiada con éxito (simulado)');
+      form.reset();
+    });
+  </script>
+   <footer>
+    <p>© 2025 Guía Gamer</p>
+   <a href="contacto.html" id="contacto">Contacto</a>
+</body>
+</html>

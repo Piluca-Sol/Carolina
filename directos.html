@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Directos - Guía Gamer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo-nav-container">
+      <img src="logo.png" alt="Guía Gamer Logo" class="logo">
+      <h1>Directos</h1>
+    </div>
+  
+    <div class="nav-user-container">
+      <nav>
+        <ul>
+          <li><a href="Index.html" class="activo">Inicio</a></li>
+          <li><a href="guias.html">Guías</a></li>
+          <li><a href="directos.html">Directos</a></li>
+          <li><a href="registro.html">Registro</a></li>
+        </ul>
+      </nav>
+      <a href="perfil.html" class="user-icon" title="Mi Perfil">
+        <img src="user-icon.svg" alt="Usuario" />
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="busqueda">
+      <h2>Buscar directo por juego o dia</h2>
+      <input type="text" id="busqueda-directos" placeholder="Escribe el juego o el dia del stream..." />
+    </section>
+
+    <section class="listado-directos" id="resultados-directos">
+      <div class="directo">
+        <h3>Gameplay en vivo: Final Fantasy XVI</h3>
+        <p>Stream grabado de la batalla final en dificultad extrema.</p>
+      </div>
+      <div class="directo">
+        <h3>Stream de Apex Legends con AnaGame</h3>
+        <p>Partida competitiva clasificatoria en directo.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Guía Gamer</p>
+    <a href="contacto.html" id="contacto">Contacto</a>
+  </footer>
+</body>
+</html>
